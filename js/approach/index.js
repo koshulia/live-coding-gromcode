@@ -25,6 +25,30 @@ function getPrimes(num) {
   }
 }
 
+// getPrimes(10);
+// getPrimes(11);
+// getPrimes(15);
+
+//refactored
+
+//input: number
+//output: boolean
+
+function isPrime(number) {
+  for (let index = 2; index < number; index++) {
+    if (number % index === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function getPrimes(num) {
+  for (let number = 2; number <= num; number++) {
+    if (isPrime(number)) {
+      console.log(number);
+    }
+  }
+}
+
 getPrimes(10);
-getPrimes(11);
-getPrimes(15);
