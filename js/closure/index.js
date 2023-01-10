@@ -1,32 +1,32 @@
 'use strict';
 
 const createLogger = () => {
-  const records = [];
+  const getRecordsArr = [];
 
   return {
     warn(message) {
-      records.push({
+      getRecordsArr.push({
         message,
         dateTime: new Date(),
         type: 'warn',
       });
     },
     error(message) {
-      records.push({
+      getRecordsArr.push({
         message,
         dateTime: new Date(),
         type: 'error',
       });
     },
     log(message) {
-      records.push({
+      getRecordsArr.push({
         message,
         dateTime: new Date(),
         type: 'log',
       });
     },
     getRecords(type) {
-      return (type ? records.filter(el => el.type === type) : records).sort(
+      return (type ? getRecordsArr.filter(el => el.type === type) : getRecordsArr).sort(
         (a, b) => b.dateTime - a.dateTime,
       );
     },
