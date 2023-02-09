@@ -2,7 +2,7 @@
 
 // //GOOD
 // function compareObjects(firstObj, secondObj) {
-//   return Object.keys({ ...firstObj, ...secondObj }).every(key => firstObj[key] === secondObj[key]);
+//   return Object.keys({ ...firstObj, ...secondObj }).(key => firstObj[key] === secondObj[key]);
 // }
 
 // //NORM
