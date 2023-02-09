@@ -16,7 +16,7 @@ class Life extends Component {
     return nextProps.number;
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
     console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
   }
 
