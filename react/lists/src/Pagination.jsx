@@ -9,9 +9,7 @@ import React from 'react';
 
 const Pagination = props => {
   const isPrevPageAvailable = props.currentPage > 1;
-
-  const isNextPageAvailable =
-    props.currentPage === Math.ceil(props.totalItems.length / props.itemsPerPage);
+  const isNextPageAvailable = props.currentPage * props.itemsPerPage < props.totalItems;
 
   return (
     <div className="pagination">
@@ -19,8 +17,8 @@ const Pagination = props => {
         {isPrevPageAvailable && '←'}
       </button>
       <span className="pagination__page">{props.currentPage}</span>
-      <button className="btn" onClick={props.goNext} disabled={isNextPageAvailable}>
-        {!isNextPageAvailable && '→'}
+      <button className="btn" onClick={props.goNext} disabled={!isNextPageAvailable}>
+        {isNextPageAvailable && '→'}
       </button>
     </div>
   );
