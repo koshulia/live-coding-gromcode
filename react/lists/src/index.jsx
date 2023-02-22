@@ -24,6 +24,21 @@ const users = [
     age: 45,
     name: 'Sam',
   },
+  {
+    id: 'id-4',
+    age: 45,
+    name: 'Trevis',
+  },
+  {
+    id: 'id-5',
+    age: 45,
+    name: 'Ian',
+  },
+  {
+    id: 'id-6',
+    age: 45,
+    name: 'Dan',
+  },
 ];
 
 const rootElement = document.querySelector('#root');
