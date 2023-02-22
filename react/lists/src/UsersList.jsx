@@ -32,13 +32,15 @@ class UsersList extends React.Component {
 
     return (
       <div>
-        <Pagination
-          goPrev={this.goPrev}
-          goNext={this.goNext}
-          currentPage={currentPage}
-          totalItems={users}
-          itemsPerPage={itemsPerPage}
-        />
+        <div className="pagination">
+          <Pagination
+            goPrev={this.goPrev}
+            goNext={this.goNext}
+            currentPage={currentPage}
+            totalItems={users}
+            itemsPerPage={itemsPerPage}
+          />
+        </div>
         <ul className="users">
           {users.slice(indexFrom, indexTo).map(user => (
             <User key={user.id} {...user} />
