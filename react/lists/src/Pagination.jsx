@@ -12,7 +12,7 @@ const Pagination = props => {
   const isNextPageAvailable = props.totalItems.length - props.currentPage * props.itemsPerPage > 0;
 
   return (
-    <>
+    <div className="pagination">
       <button className="btn" onClick={props.goPrev} disabled={isPrevPageAvailable}>
         {!isPrevPageAvailable && '←'}
       </button>
@@ -20,7 +20,7 @@ const Pagination = props => {
       <button className="btn" onClick={props.goNext} disabled={!isNextPageAvailable}>
         {isNextPageAvailable && '→'}
       </button>
-    </>
+    </div>
   );
 };
 
